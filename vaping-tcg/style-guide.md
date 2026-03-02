@@ -1,6 +1,7 @@
 # Style Guide: vaping-tcg
 
-Generated: 2026-03-02T17:40:00Z
+Generated: 2026-03-02T18:00:00Z
+Last Updated: 2026-03-02T18:00:00Z - **High Resolution Screenshots Refresh**
 
 ## Brand
 
@@ -15,9 +16,9 @@ Generated: 2026-03-02T17:40:00Z
 
 ## Landing Page
 
-- **URL**: https://builders-garden.github.io/bg-briefs/vaping-tcg/ (ready for deployment)
+- **URL**: https://builders-garden.github.io/bg-briefs/vaping-tcg/ ✅ **LIVE**
 - **Repo**: https://github.com/builders-garden/bg-briefs/tree/main/vaping-tcg
-- **Screenshots**: Successfully captured - combined view + 4 individual screens
+- **Screenshots**: ✅ **REFRESHED** - High resolution (3x scale) combined view + 4 individual screens
 
 ## Design Notes
 
@@ -26,10 +27,11 @@ Generated: 2026-03-02T17:40:00Z
 - 4 screens generated with electrifying aesthetics featuring dark backgrounds with indigo/cyan accents
 - Immersive pack opening with holographic reveals and perspective-warped card gallery
 - Clean marketplace design with rarity-based visual indicators
-- All screenshots captured at 2x scale with transparent backgrounds
+- Gaming-inspired navigation with floating frosted glass effects
 
 ## Technical Notes
 
-- Fixed screenshot API issue: uses GET with query parameters, not POST with JSON
-- Landing page includes actual screen images from Sleek generation
-- GitHub deployment ready but requires manual push due to permission issue
+- ✅ Screenshot API optimized: GET requests with scale=3 for maximum quality
+- ✅ Landing page fully deployed and accessible
+- ✅ GitHub Pages deployment working correctly
+- All screenshots retaken at 3x resolution with transparent backgrounds for crisp display
