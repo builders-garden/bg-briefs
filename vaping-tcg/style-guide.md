@@ -1,13 +1,21 @@
 # Style Guide: vaping-tcg
 
 Generated: 2026-03-02T18:00:00Z
-Last Updated: 2026-03-02T18:10:00Z - **🚀 ULTRA HIGH QUALITY SCREENSHOTS** 
+Last Updated: 2026-03-02T18:13:00Z - **⚔️ HEARTHSTONE REDESIGN** 
 
-## Brand
+## Brand & Visual Identity
 
-- **Primary colour**: #6366f1
-- **Font**: Inter
-- **Logo**: none
+### Hearthstone-Inspired Palette
+- **Primary Gold**: #D4AF37 (Hearthstone signature gold)
+- **Bronze Accent**: #CD7F32 (warm metal tones)
+- **Rich Brown**: #8B4513 (wood & leather)
+- **Parchment**: #F5E6D3 (ancient scroll texture)
+- **Dark Wood**: #2D1810 (deep fantasy backgrounds)
+
+### Typography
+- **Headlines**: Cinzel (fantasy serif for titles)
+- **Body Text**: Crimson Text (elegant readable serif)
+- **Theme**: Medieval fantasy with ornate styling
 
 ## Sleek Project
 
@@ -16,23 +24,30 @@ Last Updated: 2026-03-02T18:10:00Z - **🚀 ULTRA HIGH QUALITY SCREENSHOTS**
 
 ## Landing Page
 
-- **URL**: https://builders-garden.github.io/bg-briefs/vaping-tcg/ ✅ **LIVE & ENHANCED**
+- **URL**: https://builders-garden.github.io/bg-briefs/vaping-tcg/ ✅ **LIVE - HEARTHSTONE STYLED**
 - **Repo**: https://github.com/builders-garden/bg-briefs/tree/main/vaping-tcg
-- **Screenshots**: 🚀 **ULTRA HIGH QUALITY** - Enhanced POST API integration (5.9MB combined, 353KB-1.8MB individual)
+- **Screenshots**: 🚀 **ULTRA HIGH QUALITY** + ⚔️ **Fantasy Card Frames**
 
-## Design Notes
+## Design Features
 
-- Built from discovery doc: 1MMier_R7Kn1fWOOyEaC56BmXx7cS4fdr
-- Brand colours scraped from: defaults used
-- 4 screens generated with electrifying aesthetics featuring dark backgrounds with indigo/cyan accents
-- Immersive pack opening with holographic reveals and perspective-warped card gallery
-- Clean marketplace design with rarity-based visual indicators
-- Gaming-inspired navigation with floating frosted glass effects
+### Hearthstone Elements
+- **Ornate card frames**: Gradient gold borders with inner glow effects
+- **Fantasy typography**: Medieval-inspired font hierarchy
+- **Mystical language**: "Treasury", "Arcane Gallery", "Trading Bazaar", "Guild Network"
+- **Rich backgrounds**: Multi-layer gradients mimicking wood & metal
+- **Glowing text effects**: Golden text shadows for emphasis
+- **Ornate dividers**: Decorative elements with diamond symbols (◆)
+
+### Visual Effects
+- **Card hover animations**: Scale transforms on interaction
+- **Gradient overlays**: Radial gold glows throughout
+- **Textured backgrounds**: Fantasy game aesthetic
+- **Immersive theming**: Complete transformation from modern tech to fantasy realm
 
 ## Technical Notes
 
-- 🚀 **Updated Sleek Integration**: POST API with JSON payload (vs previous GET approach)
-- ✅ **Massive Quality Boost**: Screenshots now 83x larger (5.9MB vs 71KB combined)
-- ✅ **Perfect API Integration**: All screenshot endpoints working flawlessly
-- ✅ **Landing page deployed**: Live with ultra-high quality visuals
-- Enhanced detail capture: card textures, lighting effects, and UI elements are crystal clear
+- ⚔️ **Complete Design Overhaul**: Transformed from modern gaming to Hearthstone fantasy
+- 🎨 **Rich Color System**: 6-color Hearthstone-inspired palette
+- ✨ **Custom CSS Effects**: Ornate borders, glows, and textures
+- 🚀 **Screenshots Preserved**: Ultra-high quality mockups maintained in new fantasy frames
+- 📱 **Responsive Design**: Fantasy aesthetics scale across all devices
