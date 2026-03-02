@@ -9,85 +9,242 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: { brand: '#6366f1' }
+          colors: { 
+            'hs-gold': '#D4AF37',
+            'hs-bronze': '#CD7F32',
+            'hs-brown': '#8B4513',
+            'hs-cream': '#F5E6D3',
+            'hs-dark': '#2D1810',
+            'hs-wood': '#8B4513'
+          },
+          fontFamily: {
+            'fantasy': ['Cinzel', 'serif'],
+            'medieval': ['Trajan Pro', 'serif']
+          }
         }
       }
     }
   </script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    body { font-family: 'Inter', sans-serif; }
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+    body { 
+      font-family: 'Crimson Text', serif; 
+      background: linear-gradient(135deg, #2D1810 0%, #8B4513 25%, #2D1810 75%, #1a0f08 100%);
+      background-attachment: fixed;
+    }
+    .ornate-border {
+      border-image: linear-gradient(45deg, #D4AF37, #CD7F32, #D4AF37) 1;
+      border-width: 3px;
+      border-style: solid;
+    }
+    .card-frame {
+      background: linear-gradient(145deg, #F5E6D3 0%, #D4AF37 20%, #8B4513 80%, #2D1810 100%);
+      border-radius: 15px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-frame::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .glow-text {
+      text-shadow: 0 0 10px #D4AF37, 0 0 20px #D4AF37, 0 0 30px #D4AF37;
+    }
+    .ornate-divider {
+      background: linear-gradient(90deg, transparent 0%, #D4AF37 20%, #CD7F32 50%, #D4AF37 80%, transparent 100%);
+      height: 3px;
+      position: relative;
+    }
+    .ornate-divider::before,
+    .ornate-divider::after {
+      content: '◆';
+      position: absolute;
+      top: -8px;
+      color: #D4AF37;
+      font-size: 18px;
+    }
+    .ornate-divider::before {
+      left: 20%;
+    }
+    .ornate-divider::after {
+      right: 20%;
+    }
   </style>
 </head>
-<body class="bg-gray-950 text-white">
+<body class="text-hs-cream">
 
   <!-- Hero -->
-  <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 py-20">
-    <h1 class="text-5xl font-bold mb-4">Vaping TCG</h1>
-    <p class="text-xl text-gray-400 max-w-xl mb-10">The first trading card game for the vaping community - collect, trade, and show off humorous vaping-themed cards with stunning 3D effects</p>
-    <a href="#features" class="bg-brand hover:opacity-90 text-white font-semibold px-8 py-4 rounded-full text-lg transition">
-      Get Early Access
-    </a>
+  <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 relative">
+    <div class="absolute inset-0 bg-gradient-radial from-hs-gold/10 via-transparent to-transparent"></div>
+    
+    <!-- Ornate Header Frame -->
+    <div class="card-frame p-8 max-w-4xl mx-auto mb-8 relative">
+      <div class="absolute top-3 left-3 right-3 bottom-3 border-2 border-hs-gold/50 rounded-lg"></div>
+      <h1 class="font-fantasy text-7xl font-bold mb-4 glow-text text-hs-gold">Vaping TCG</h1>
+      <div class="ornate-divider my-6 mx-auto max-w-md"></div>
+      <p class="text-2xl text-hs-cream max-w-2xl mx-auto mb-8 leading-relaxed">
+        The legendary trading card game for the vaping realm — collect epic cards, master ancient vaping arts, and forge your destiny in the clouds of legend
+      </p>
+      
+      <!-- Call to Action -->
+      <div class="relative inline-block">
+        <a href="#features" class="card-frame px-10 py-4 text-xl font-bold text-hs-dark hover:scale-105 transition-transform duration-300 inline-block">
+          <span class="relative z-10">⚔️ Enter the Arena</span>
+        </a>
+      </div>
+    </div>
   </section>
 
   <!-- Features -->
-  <section id="features" class="max-w-4xl mx-auto px-6 py-20">
-    <h2 class="text-3xl font-bold text-center mb-12">What it does</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-gray-900 rounded-2xl p-6">
-        <div class="text-brand text-2xl mb-3">✦</div>
-        <h3 class="font-semibold text-lg mb-2">Daily Free Packs</h3>
-        <p class="text-gray-400 text-sm">Get one free pack daily plus premium pack purchases with 5 cards per pack. Build your collection over time with a rarity system spanning Common to Legendary tiers.</p>
+  <section id="features" class="max-w-6xl mx-auto px-6 py-20">
+    <div class="card-frame p-8 mb-12">
+      <h2 class="font-fantasy text-4xl font-bold text-center mb-4 text-hs-gold">⚡ Powers & Abilities ⚡</h2>
+      <div class="ornate-divider my-6 mx-auto max-w-lg"></div>
+      <p class="text-center text-xl text-hs-cream">Master the ancient arts of the vaping realm</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Daily Packs -->
+      <div class="card-frame p-6 hover:scale-105 transition-transform duration-300">
+        <div class="text-center">
+          <div class="text-hs-gold text-4xl mb-4">🎁</div>
+          <h3 class="font-fantasy text-xl font-bold mb-3 text-hs-gold">Daily Treasury</h3>
+          <div class="h-px bg-gradient-to-r from-transparent via-hs-gold to-transparent mb-4"></div>
+          <p class="text-hs-cream leading-relaxed">Receive mystical card packs each dawn. Premium vaults contain 5 legendary artifacts with guaranteed rare treasures spanning Common to Mythic rarities.</p>
+        </div>
       </div>
-      <div class="bg-gray-900 rounded-2xl p-6">
-        <div class="text-brand text-2xl mb-3">🎮</div>
-        <h3 class="font-semibold text-lg mb-2">3D Card Gallery</h3>
-        <p class="text-gray-400 text-sm">Interactive 3D card viewer with flip animations and holographic effects for legendary cards. Browse your collection with touch-triggered video playback and stunning visual effects.</p>
+
+      <!-- 3D Gallery -->
+      <div class="card-frame p-6 hover:scale-105 transition-transform duration-300">
+        <div class="text-center">
+          <div class="text-hs-gold text-4xl mb-4">🔮</div>
+          <h3 class="font-fantasy text-xl font-bold mb-3 text-hs-gold">Arcane Gallery</h3>
+          <div class="h-px bg-gradient-to-r from-transparent via-hs-gold to-transparent mb-4"></div>
+          <p class="text-hs-cream leading-relaxed">Enchanted 3D viewing chamber with mystical flip animations and ethereal holographic effects. Legendary cards shimmer with otherworldly video enchantments.</p>
+        </div>
       </div>
-      <div class="bg-gray-900 rounded-2xl p-6">
-        <div class="text-brand text-2xl mb-3">💸</div>
-        <h3 class="font-semibold text-lg mb-2">Marketplace Trading</h3>
-        <p class="text-gray-400 text-sm">List cards for sale with fixed pricing, purchase cards from other collectors, and discover rare finds. 5% platform fee supports the community and ongoing development.</p>
+
+      <!-- Marketplace -->
+      <div class="card-frame p-6 hover:scale-105 transition-transform duration-300">
+        <div class="text-center">
+          <div class="text-hs-gold text-4xl mb-4">⚖️</div>
+          <h3 class="font-fantasy text-xl font-bold mb-3 text-hs-gold">Trading Bazaar</h3>
+          <div class="h-px bg-gradient-to-r from-transparent via-hs-gold to-transparent mb-4"></div>
+          <p class="text-hs-cream leading-relaxed">Ancient marketplace for trading legendary artifacts. Set your price, discover rare treasures, with the Guild claiming a 5% tribute to maintain the realm.</p>
+        </div>
       </div>
-      <div class="bg-gray-900 rounded-2xl p-6">
-        <div class="text-brand text-2xl mb-3">👥</div>
-        <h3 class="font-semibold text-lg mb-2">Social Features</h3>
-        <p class="text-gray-400 text-sm">Connect with friends, browse their collections, and share your best card pulls. Build a community around your shared passion for vaping culture and card collecting.</p>
+
+      <!-- Social -->
+      <div class="card-frame p-6 hover:scale-105 transition-transform duration-300">
+        <div class="text-center">
+          <div class="text-hs-gold text-4xl mb-4">🏰</div>
+          <h3 class="font-fantasy text-xl font-bold mb-3 text-hs-gold">Guild Network</h3>
+          <div class="h-px bg-gradient-to-r from-transparent via-hs-gold to-transparent mb-4"></div>
+          <p class="text-hs-cream leading-relaxed">Form alliances with fellow collectors, explore their vaults, and share your most epic discoveries across the vaping kingdoms.</p>
+        </div>
       </div>
-      <div class="bg-gray-900 rounded-2xl p-6">
-        <div class="text-brand text-2xl mb-3">📱</div>
-        <h3 class="font-semibold text-lg mb-2">Cross-Platform PWA</h3>
-        <p class="text-gray-400 text-sm">Seamless experience across mobile and desktop with account sync, social login options, and integrated payment processing for premium content.</p>
+
+      <!-- Cross-Platform -->
+      <div class="card-frame p-6 hover:scale-105 transition-transform duration-300 lg:col-span-2">
+        <div class="text-center">
+          <div class="text-hs-gold text-4xl mb-4">🌟</div>
+          <h3 class="font-fantasy text-xl font-bold mb-3 text-hs-gold">Omniversal Portal</h3>
+          <div class="h-px bg-gradient-to-r from-transparent via-hs-gold to-transparent mb-4"></div>
+          <p class="text-hs-cream leading-relaxed">Seamlessly traverse between mobile and desktop realms. Your collection, achievements, and mystical bonds sync across all planes of existence with divine payment processing.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Mockup Gallery -->
-  <section class="px-6 py-20 bg-gray-900">
-    <h2 class="text-3xl font-bold text-center mb-12">See it in action</h2>
-    <div class="flex justify-center mb-10">
-      <img src="screens/screens-combined.png" alt="Vaping TCG App Mockups" class="max-w-4xl w-full rounded-2xl shadow-2xl">
-    </div>
-    <div class="flex gap-4 overflow-x-auto pb-4 justify-center">
-      <img src="screens/screen-1.png" alt="Home Screen" class="h-80 rounded-xl shadow-lg flex-shrink-0">
-      <img src="screens/screen-2.png" alt="Collection Gallery" class="h-80 rounded-xl shadow-lg flex-shrink-0">
-      <img src="screens/screen-3.png" alt="Pack Opening" class="h-80 rounded-xl shadow-lg flex-shrink-0">
-      <img src="screens/screen-4.png" alt="Marketplace" class="h-80 rounded-xl shadow-lg flex-shrink-0">
+  <section class="px-6 py-20 relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-hs-dark/50 to-hs-brown/30"></div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="card-frame p-8 mb-12">
+        <h2 class="font-fantasy text-4xl font-bold text-center mb-4 text-hs-gold">⚔️ Witness the Legends ⚔️</h2>
+        <div class="ornate-divider my-6 mx-auto max-w-lg"></div>
+        <p class="text-center text-xl text-hs-cream">Behold the mystical interfaces of power</p>
+      </div>
+
+      <!-- Main Combined Screenshot -->
+      <div class="card-frame p-6 mb-12 max-w-6xl mx-auto">
+        <div class="relative">
+          <img src="screens/screens-combined.png" alt="Vaping TCG App Mockups" class="w-full rounded-xl">
+          <div class="absolute inset-0 bg-gradient-to-t from-hs-gold/20 via-transparent to-hs-gold/20 rounded-xl pointer-events-none"></div>
+        </div>
+      </div>
+
+      <!-- Individual Screens -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="card-frame p-4 hover:scale-105 transition-transform duration-300">
+          <div class="text-center mb-3">
+            <h4 class="font-fantasy text-lg font-bold text-hs-gold">🏰 Tavern</h4>
+            <div class="h-px bg-hs-gold/50 my-2"></div>
+          </div>
+          <img src="screens/screen-1.png" alt="Home Screen" class="w-full rounded-lg shadow-lg">
+        </div>
+        
+        <div class="card-frame p-4 hover:scale-105 transition-transform duration-300">
+          <div class="text-center mb-3">
+            <h4 class="font-fantasy text-lg font-bold text-hs-gold">📜 Vault</h4>
+            <div class="h-px bg-hs-gold/50 my-2"></div>
+          </div>
+          <img src="screens/screen-2.png" alt="Collection Gallery" class="w-full rounded-lg shadow-lg">
+        </div>
+        
+        <div class="card-frame p-4 hover:scale-105 transition-transform duration-300">
+          <div class="text-center mb-3">
+            <h4 class="font-fantasy text-lg font-bold text-hs-gold">✨ Ritual</h4>
+            <div class="h-px bg-hs-gold/50 my-2"></div>
+          </div>
+          <img src="screens/screen-3.png" alt="Pack Opening" class="w-full rounded-lg shadow-lg">
+        </div>
+        
+        <div class="card-frame p-4 hover:scale-105 transition-transform duration-300">
+          <div class="text-center mb-3">
+            <h4 class="font-fantasy text-lg font-bold text-hs-gold">⚖️ Bazaar</h4>
+            <div class="h-px bg-hs-gold/50 my-2"></div>
+          </div>
+          <img src="screens/screen-4.png" alt="Marketplace" class="w-full rounded-lg shadow-lg">
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="text-center px-6 py-20">
-    <h2 class="text-3xl font-bold mb-4">Ready to build?</h2>
-    <p class="text-gray-400 mb-8">Reach out and let's make it happen.</p>
-    <a href="https://builders.garden" class="bg-brand hover:opacity-90 text-white font-semibold px-8 py-4 rounded-full text-lg transition">
-      Talk to us
-    </a>
+  <section class="text-center px-6 py-20 relative">
+    <div class="card-frame p-12 max-w-4xl mx-auto">
+      <h2 class="font-fantasy text-4xl font-bold mb-4 text-hs-gold glow-text">⚡ Forge Your Destiny ⚡</h2>
+      <div class="ornate-divider my-8 mx-auto max-w-md"></div>
+      <p class="text-2xl text-hs-cream mb-8 leading-relaxed">The realm awaits your vision. Let us craft legends together.</p>
+      
+      <div class="relative inline-block">
+        <a href="https://builders.garden" class="card-frame px-12 py-6 text-2xl font-bold text-hs-dark hover:scale-105 transition-transform duration-300 inline-block">
+          <span class="relative z-10">🔥 Summon the Builders 🔥</span>
+        </a>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-8 text-gray-600 text-sm">
-    Design by <a href="https://builders.garden" class="hover:text-brand">Builders Garden</a>
+  <footer class="py-12 relative">
+    <div class="ornate-divider mb-8 max-w-2xl mx-auto"></div>
+    <div class="text-center">
+      <p class="text-hs-bronze text-lg mb-2">⚒️ Crafted in the Forges of Legend ⚒️</p>
+      <p class="text-hs-cream">
+        By the master artisans of 
+        <a href="https://builders.garden" class="text-hs-gold hover:glow-text transition-all duration-300 font-bold">
+          Builders Garden
+        </a>
+      </p>
+    </div>
   </footer>
 
 </body>
