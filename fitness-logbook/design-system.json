@@ -1,0 +1,12 @@
+{
+  "category": "health",
+  "theme": "light",
+  "base": "#FAFAFA",
+  "accent": "#4F46E5",
+  "secondary": "#F59E0B",
+  "card": "#FFFFFF", 
+  "displayFont": "Inter",
+  "bodyFont": "Inter",
+  "radius": "16px",
+  "density": "airy"
+}

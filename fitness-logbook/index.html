@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Logbook</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { 
+            'brand': '#4F46E5',
+            'secondary': '#F59E0B'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Hero -->
+  <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-6xl font-bold mb-6 text-gray-900">
+        <span class="text-brand">Fitness</span> Logbook
+      </h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed">
+        Your personal trainer in your pocket. Track workouts, monitor progress, and achieve your fitness goals with clean, motivational design and powerful analytics.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+        <a href="#features" class="bg-brand hover:bg-brand/90 text-white font-semibold px-8 py-4 rounded-lg text-lg transition">
+          Explore Features
+        </a>
+        <a href="#mockups" class="border-2 border-brand text-brand hover:bg-brand hover:text-white font-semibold px-8 py-4 rounded-lg text-lg transition">
+          View Demo
+        </a>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-brand mb-2">4</div>
+          <div class="text-sm text-gray-600 uppercase tracking-wide">Core Features</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-brand mb-2">PWA</div>
+          <div class="text-sm text-gray-600 uppercase tracking-wide">Cross-Platform</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-brand mb-2">3D</div>
+          <div class="text-sm text-gray-600 uppercase tracking-wide">Analytics</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="max-w-6xl mx-auto px-6 py-20">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-6 text-gray-900">Powerful Fitness Tracking</h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Everything you need to stay motivated and track your fitness journey with precision
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+      <!-- Dashboard -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+        <div class="w-16 h-16 bg-brand/10 rounded-xl flex items-center justify-center mb-6">
+          <div class="text-3xl">📊</div>
+        </div>
+        <h3 class="text-xl font-bold mb-4 text-gray-900">Smart Dashboard</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Personalized greeting, today's workout plan, progress stats, and recent activity feed. Everything you need at a glance.
+        </p>
+      </div>
+
+      <!-- Workout Logging -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+        <div class="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center mb-6">
+          <div class="text-3xl">🏋️</div>
+        </div>
+        <h3 class="text-xl font-bold mb-4 text-gray-900">Workout Tracking</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Easy exercise logging with timer, rep counters, weight tracking, and progress through your workout with completion percentage.
+        </p>
+      </div>
+
+      <!-- Progress Analytics -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+        <div class="w-16 h-16 bg-brand/10 rounded-xl flex items-center justify-center mb-6">
+          <div class="text-3xl">📈</div>
+        </div>
+        <h3 class="text-xl font-bold mb-4 text-gray-900">Progress Analytics</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Body metrics charts, workout consistency heatmaps, personal records showcase, and detailed performance analytics.
+        </p>
+      </div>
+
+      <!-- Exercise Library -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+        <div class="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center mb-6">
+          <div class="text-3xl">📚</div>
+        </div>
+        <h3 class="text-xl font-bold mb-4 text-gray-900">Exercise Library</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Comprehensive exercise database with muscle group categories, instructions, demo images, and favorite exercises.
+        </p>
+      </div>
+    </div>
+
+    <!-- Tech Stack -->
+    <div class="bg-gradient-to-r from-brand to-purple-600 rounded-2xl p-8 mt-16 text-center text-white">
+      <h3 class="text-2xl font-bold mb-4">Modern Technology Stack</h3>
+      <p class="text-white/90 text-lg mb-6">
+        Progressive Web App with seamless mobile and desktop experience. Advanced analytics, 
+        social authentication, and real-time synchronization.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 text-sm">
+        <span class="bg-white/20 backdrop-blur px-4 py-2 rounded-full">Progressive Web App</span>
+        <span class="bg-white/20 backdrop-blur px-4 py-2 rounded-full">Real-time Analytics</span>
+        <span class="bg-white/20 backdrop-blur px-4 py-2 rounded-full">Social Authentication</span>
+        <span class="bg-white/20 backdrop-blur px-4 py-2 rounded-full">Cross-platform Sync</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mockup Gallery -->
+  <section id="mockups" class="px-6 py-20 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-6 text-gray-900">App Preview</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          See the clean, motivational interface designed to keep you focused on your fitness goals
+        </p>
+      </div>
+
+      <!-- Main Combined Screenshot -->
+      <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 mb-16">
+        <img src="screens/screens-combined.png" alt="Fitness Logbook App Mockups" class="w-full rounded-2xl shadow-2xl">
+      </div>
+
+      <!-- Individual Screens -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-gray-50 rounded-2xl p-6 text-center">
+          <div class="mb-4">
+            <h4 class="text-lg font-bold text-gray-900 mb-2">Dashboard</h4>
+            <div class="w-12 h-px bg-brand mx-auto"></div>
+          </div>
+          <img src="screens/screen-1.png" alt="Dashboard Screen" class="w-full rounded-xl shadow-lg">
+          <p class="text-gray-600 text-sm mt-3">Personal overview</p>
+        </div>
+        
+        <div class="bg-gray-50 rounded-2xl p-6 text-center">
+          <div class="mb-4">
+            <h4 class="text-lg font-bold text-gray-900 mb-2">Workout</h4>
+            <div class="w-12 h-px bg-brand mx-auto"></div>
+          </div>
+          <img src="screens/screen-2.png" alt="Workout Logging Screen" class="w-full rounded-xl shadow-lg">
+          <p class="text-gray-600 text-sm mt-3">Exercise tracking</p>
+        </div>
+        
+        <div class="bg-gray-50 rounded-2xl p-6 text-center">
+          <div class="mb-4">
+            <h4 class="text-lg font-bold text-gray-900 mb-2">Analytics</h4>
+            <div class="w-12 h-px bg-brand mx-auto"></div>
+          </div>
+          <img src="screens/screen-3.png" alt="Progress Analytics Screen" class="w-full rounded-xl shadow-lg">
+          <p class="text-gray-600 text-sm mt-3">Progress insights</p>
+        </div>
+        
+        <div class="bg-gray-50 rounded-2xl p-6 text-center">
+          <div class="mb-4">
+            <h4 class="text-lg font-bold text-gray-900 mb-2">Library</h4>
+            <div class="w-12 h-px bg-brand mx-auto"></div>
+          </div>
+          <img src="screens/screen-4.png" alt="Exercise Library Screen" class="w-full rounded-xl shadow-lg">
+          <p class="text-gray-600 text-sm mt-3">Exercise database</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="text-center px-6 py-20 bg-gradient-to-br from-brand to-purple-600">
+    <div class="max-w-4xl mx-auto text-white">
+      <h2 class="text-4xl font-bold mb-6">Ready to Transform Your Fitness Journey?</h2>
+      <p class="text-xl text-white/90 mb-8 leading-relaxed max-w-2xl mx-auto">
+        Partner with our expert development team to bring your fitness app vision to life. 
+        Clean design, powerful analytics, and user-focused experience guaranteed.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href="https://builders.garden" class="bg-white text-brand hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg text-lg transition">
+          Start Your Project
+        </a>
+        <a href="mailto:hello@builders.garden" class="border-2 border-white text-white hover:bg-white hover:text-brand font-semibold px-8 py-4 rounded-lg text-lg transition">
+          Contact Team
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-white border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <div class="flex items-center justify-center gap-3 mb-4">
+        <div class="w-8 h-8 bg-brand rounded-lg flex items-center justify-center">
+          <span class="text-white text-sm font-bold">💪</span>
+        </div>
+        <span class="text-lg font-semibold text-gray-900">Fitness App Development</span>
+      </div>
+      <p class="text-gray-600 mb-6">
+        Designed and developed by the expert team at 
+        <a href="https://builders.garden" class="text-brand hover:text-brand/80 font-semibold transition-colors">
+          Builders Garden
+        </a>
+      </p>
+      <div class="flex justify-center gap-6 text-sm text-gray-500">
+        <span class="bg-gray-100 px-3 py-1 rounded-full">Progressive Web App</span>
+        <span class="bg-gray-100 px-3 py-1 rounded-full">Health & Fitness</span>
+        <span class="bg-gray-100 px-3 py-1 rounded-full">Analytics & Tracking</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
